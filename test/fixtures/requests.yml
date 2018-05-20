@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  priority: 1
+  deadline: 2018-05-20
+  project_phase: 1
+  title: MyString
+  content: MyText
+  discipline: one
+  requester: one
+  requested: one
+
+two:
+  priority: 1
+  deadline: 2018-05-20
+  project_phase: 1
+  title: MyString
+  content: MyText
+  discipline: two
+  requester: two
+  requested: two
