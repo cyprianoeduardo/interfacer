@@ -28,5 +28,18 @@ class Ability
     #
     # See the wiki for details:
     # https://github.com/CanCanCommunity/cancancan/wiki/Defining-Abilities
+    if user
+      if user.kind == 'default'
+        can :access, :rails_admin
+        can :dashboard, :all
+        can :read, Company
+        can [:create, :read, :update], Request, requester_id: user.company_id
+        can :read, Request, requested_id: user.company_id
+        can [:create, :read], Response, company_id: user.company_id
+        can :read, Discipline
+      elsif user.kind == 'admin'
+        can :manage, :all
+      end
+    end
   end
 end
