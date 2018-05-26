@@ -1,9 +1,6 @@
-class User < ApplicationRecord
+class Install < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
-  belongs_to :company
-  enum kind: [:admin, :default]
-  enum status: [:active, :inactive]
 end
