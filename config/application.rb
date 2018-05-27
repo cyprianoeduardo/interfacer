@@ -11,7 +11,7 @@ module Interfacer
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.2
 
-    # Prevent initializing the application before assets are precompiled (required for heroku)
+    # Prevent initializing the application before assets are precompiled (required for Devise on Heroku)
     config.assets.initialize_on_precompile = false
     # Add Rails Admin assets (required)
     config.assets.precompile += ['rails_admin/rails_admin.css', 'rails_admin/rails_admin.js']
