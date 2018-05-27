@@ -13,3 +13,10 @@
  *= require_tree .
  *= require_self
  */
+ 
+ /* Required for gem devise-bootstrap-views. https://github.com/hisea/devise-bootstrap-views
+ /*# SASS*/
+ = require devise_bootstrap_views
+
+ /*# LESS*/
+ = require devise_bootstrap_views_less

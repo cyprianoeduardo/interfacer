@@ -7,9 +7,17 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.css">
   </head>
 
-  <body>
+  <body style="background-color: #E9EFF5; background-image: url(https://www.designfreelogoonline.com/wp-content/uploads/2014/11/00142-network-globe-logo-design-free-logos-online-03.png); background-repeat: no-repeat; background-attachment: fixed; background-position: center; background-blend-mode: normal; background-size: 50%">
+    <a class='navbar-brand pjax' href='/' style="background-color: #009D7C; color: white;">
+      INTERFACER
+      <small>Integrated Project Communication Management System</small>
+    </a>
+    <div class='collapse navbar-collapse' id='secondary-navigation' style="background-color: #00C69D; color: white;"></div>
     <%= yield %>
   </body>
 </html>
