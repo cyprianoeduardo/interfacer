@@ -1,5 +1,52 @@
 RailsAdmin.config do |config|
 
+  # title of the app
+  config.main_app_name = ["INTERFACER", "Integrated Project Communication Management System"]
+
+  # label of navigation bar
+  config.navigation_static_label = "Support"
+
+  # links of navigation bar
+  config.navigation_static_links = {
+    'IT Support Contractor' => 'mailto:cypriano.eduardo@gmail.com'
+  }
+  config.model Company do
+    parent User
+    navigation_icon 'fa fa-building'
+  end
+
+  config.model Discipline do
+    navigation_icon 'fa fa-tags'
+    list do
+      exclude_fields :updated_at, :created_at
+    end 
+  end
+
+  config.model Install do
+    visible false
+  end
+
+  config.model Request do
+    weight -2
+    navigation_icon 'fa fa-file'
+  end
+
+  config.model Response do
+    parent Request
+    navigation_icon 'fa fa-file-text'
+    list do
+      exclude_fields :updated_at
+    end 
+  end
+
+  config.model User do
+    weight -1
+    navigation_icon 'fa fa-user' 
+  end
+
+  # All columns show up on a single page. https://github.com/sferik/rails_admin/wiki/Horizontally-scrolling-table-with-frozen-columns-in-list-view
+  config.total_columns_width = 9999999
+
   ### Popular gems integration
 
   ## == Devise ==
