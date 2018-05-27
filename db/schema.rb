@@ -53,9 +53,6 @@ ActiveRecord::Schema.define(version: 2018_05_26_025622) do
     t.integer "requested_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["discipline_id"], name: "index_requests_on_discipline_id"
-    t.index ["requested_id"], name: "index_requests_on_requested_id"
-    t.index ["requester_id"], name: "index_requests_on_requester_id"
   end
 
   create_table "responses", force: :cascade do |t|
@@ -64,8 +61,6 @@ ActiveRecord::Schema.define(version: 2018_05_26_025622) do
     t.integer "company_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["company_id"], name: "index_responses_on_company_id"
-    t.index ["request_id"], name: "index_responses_on_request_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -86,7 +81,6 @@ ActiveRecord::Schema.define(version: 2018_05_26_025622) do
     t.datetime "last_sign_in_at"
     t.string "current_sign_in_ip"
     t.string "last_sign_in_ip"
-    t.index ["company_id"], name: "index_users_on_company_id"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

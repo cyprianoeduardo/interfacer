@@ -8,7 +8,7 @@ class CreateUsers < ActiveRecord::Migration[5.2]
       #t.string :password
       t.integer :kind
       t.integer :status
-      t.references :company, foreign_key: true
+      t.integer :company_id, foreign_key: true
 
       t.timestamps
     end

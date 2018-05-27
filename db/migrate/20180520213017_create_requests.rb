@@ -6,9 +6,9 @@ class CreateRequests < ActiveRecord::Migration[5.2]
       t.integer :project_phase
       t.string :title
       t.text :content
-      t.references :discipline, foreign_key: true
-      t.references :requester, foreign_key: true
-      t.references :requested, foreign_key: true
+      t.integer :discipline_id, foreign_key: true
+      t.integer :requester_id, foreign_key: true
+      t.integer :requested_id, foreign_key: true
 
       t.timestamps
     end
