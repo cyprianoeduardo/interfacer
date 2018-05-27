@@ -21,3 +21,9 @@ User.create first_name: 'Munique', last_name: 'Araújo', email: 'munique@altus.c
 User.create first_name: 'Guilherme', last_name: 'Cypriano', email: 'guilherme@altus.com', password: 123456, kind: :default, status: :active, company: altus
 User.create first_name: 'Judith', last_name: 'Cypriano', email: 'judith@jurong.com', password: 123456, kind: :default, status: :active, company: jurong
 User.create first_name: 'Victor Hugo', last_name: 'Cypriano', email: 'vh@jurong.com', password: 123456, kind: :default, status: :inactive, company: jurong
+Discipline.create name: 'Automation'
+Discipline.create name: 'Estructure'
+Discipline.create name: 'Electrical'
+Discipline.create name: 'Safety'
+Discipline.create name: 'Instrumentation'
+Discipline.create name: 'Process'
